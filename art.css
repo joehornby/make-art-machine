@@ -1,0 +1,118 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.art__nav, .art__footer {
+  font-family: neue-haas-unica, "Helvetica", "Arial", sans-serif;
+  color: #FCFCFC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 11pt;
+  position: fixed;
+  height: 2em;
+  padding: 0.5em;
+  z-index: 10;
+  background-color: rgba(252, 252, 252, 0.9);
+}
+
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  .art__nav, .art__footer {
+    background-color: rgba(252, 252, 252, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+}
+
+.art__nav {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.art__nav__name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.art__nav__name a:hover, .art__nav__name a:focus {
+  color: #ffc800;
+}
+
+.art__nav__role {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.art__footer {
+  font-family: neue-haas-unica, "Helvetica", "Arial", sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.info__button {
+  background-color: transparent;
+  text-transform: none;
+  font-size: inherit;
+  padding: 0 0 1px 0;
+  margin: 0;
+  color: #3D3D3D;
+}
+
+.info__button:hover, .info__button:focus {
+  border: none;
+  color: #ffc800;
+  background-color: transparent;
+}
+
+.info__button:active {
+  background-color: transparent;
+  color: rgba(255, 200, 0, 0.7);
+}
+
+.info__panel {
+  font-family: neue-haas-unica, "Helvetica", "Arial", sans-serif;
+  font-size: 0.5rem;
+  color: #3D3D3D;
+  background-color: rgba(252, 252, 252, 0.9);
+  position: fixed;
+  max-width: 400px;
+  bottom: 2rem;
+  right: 1rem;
+  padding: 1rem;
+  margin: 0;
+  z-index: 9;
+}
+
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  .info__panel {
+    background-color: rgba(252, 252, 252, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+}
+
+.info__panel p:first-of-type {
+  margin-top: 0;
+}
+/*# sourceMappingURL=art.css.map */
