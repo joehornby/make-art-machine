@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Hornby | Text to Image</title>
+
+    <meta name="title" content="Joseph Hornby Art">
+    <!-- <meta name="description" content="London based Creative Technologist working across engineering and design."> -->
+    <meta name="author" content="Joseph Hornby">
+    <meta name="copyright" content="Joseph Hornby">
+    <meta name="keywords" content="Generative Art, Creative Technologist,Creative Technology,Interactive,Immersive,Experience,UX,Acoustics,Sound Design,Spatial audio,Auralisation,Sound demonstration,Acoustic modelling,Sound art,sound installation">
+    <meta name="robots" content="nosnippet, noarchive">
+    <meta name="description" content="Generative art: generate images from text using machine learning.">
+
+    <!-- Typekit -->
+    <link rel="stylesheet" href="https://use.typekit.net/uiv5xjo.css"> 
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../art/css/art.css">
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+    <nav class="art__nav">
+        <span class="art__nav__name"><a href="http://joehornby.co.uk/">Joseph Hornby</a></span>
+        <span class="art__nav__role">Creative Technology</span>
+
+    </nav>
+        <section class="input blend-difference">
+
+            <label class="input__label blend-difference" for="textInput">Type a sentence to generate images</label>
+
+            <textarea class="input__textarea blend-difference" id="textInput" placeholder="Make art, machine" autofocus cols="20" rows="6" spellcheck="false" tab-index="0"></textarea>
+    
+            <div id="input__playback" class="input__playback">
+                <button class="blend-difference" id="play" tab-index="0" style="display: block;">Play back</button>
+                <button class="blend-difference" id="stop" style="display: none;" tab-index="0">Stop</button>
+            </div>
+    
+    
+            <div id="input__display" class="input__display">
+                <div id="nogrid">
+                    <button class="blend-difference">Show all</button>
+                </div>
+                <div class="blend-difference" id="grid" style="display: none;">
+                    <button>Show one</button>
+                </div>
+            </div>
+        </section>
+        
+
+        <div id="outputContainer" class="output">
+            <div id="canvasContainer">
+                <canvas id="defaultCanvas0" class="p5Canvas"></canvas>
+            </div>
+            <div id="results" class="results" style="display: none;"></div>
+            
+        </div>
+        
+
+        
+    <!-- </main> -->
+
+    <section id="info__panel" class="info__panel hide">
+        <p>A generative art work creating images from text. The images are created from an AttGAN trained model that consists of a series of neural network pairs - a generator and a discriminator. The generator is trained to generate images similar enough to real images from the training dataset. The discriminator evaluates the generated image, and compares them with the real ones and steer the generator in the right direction.</p>
+        <p>The result is a model that is very good at drawing certain images, and very interesting to explore outside of that ability.</p>
+        <p>AttnGAN was created by Tao Xu, et al. (MIT License, Copyright 2018)</p>
+        <button class="info__button" onclick="toggleInfoPanel()">Close</button>
+    </section>
+
+    <footer class="art__footer">
+        <span class="art__footer__title">Make Art, Machine</span>
+        <button class="info__button" id="info__button" onclick="toggleInfoPanel()">Information</button>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="../lib/p5.speech.js"></script>
+
+    <script src="./script.js"></script>
+    
+    <script src="./sketch.js"></script>
+    
+</body>
+</html>

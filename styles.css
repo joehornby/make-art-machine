@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'gilroy-light';
+  src: url('font/gilroy-light-webfont.woff2') format('woff2'),
+       url('font/gilroy-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gilroy-extrabold';
+  src: url('font/gilroy-extrabold-webfont.woff2') format('woff2'),
+       url('font/gilroy-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 25px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255,230,150);
+}
+
+@media screen and (max-width: 800px){
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+* {
+  color: rgb(10, 10, 10);
+  box-sizing: border-box;
+}
+* > *{
+  box-sizing: border-box;
+}
+
+*::selection{
+  background-color: rgba(50, 200, 200, 0.8);
+}
+
+*:focus{
+  outline: none; /* focus handled on buttons */
+}
+
+button {
+  color: #fff;
+  display: inline-block;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0);
+  width: auto;
+  padding: 0.4rem 0;
+  margin: 0.4rem 0;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  color: inherit;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  transition: border 250ms ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  
+}
+
+button:hover {
+  border-bottom: 1px solid rgba(255,255,255,1);
+
+}
+
+button:focus {
+  background: #fff;
+  outline: none;
+}
+
+button:active {
+  background-color: yellow;
+}
+
+.input {
+  font-family: gilroy-light, sans-serif;
+  grid-area: input;
+  position: fixed;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
+  height: 80vh;
+  z-index: 1;
+}
+
+.input__label {
+  display: block;
+  padding-bottom: 3rem;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+}
+
+.input__playback {
+  position: fixed;
+  bottom: 4rem;
+  left: 10vw;
+}
+
+.input__display {
+  position: fixed;
+  bottom: 2rem;
+  left: 10vw;
+}
+.results {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  grid-auto-rows: min-content; 
+  grid-gap: 0;
+  height: fit-content;
+  z-index: 0;
+}
+
+.results img {
+  display: block;
+  margin:0;
+  padding:0;
+}
+
+#textInput {
+  font-family: gilroy-extrabold, sans-serif;
+  font-size: 2rem;
+  color: rgb(255, 200, 0);
+  border: none;
+  width: 100%;
+  height: 95%;
+  resize: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  overflow: hidden;
+  resize: none;
+  background-color: rgba(255,255,255,0);
+  line-height: 0.8em;
+  letter-spacing: -0.057em;
+}
+
+@media only screen and (min-width: 800px){
+  #textInput{
+    font-size: 4rem;
+  }
+}
+#textInput::placeholder {
+  color: rgb(255, 200, 0);
+  opacity: 1;
+}
+
+.blend-difference {
+  color: rgba(255,255,255,0.8);
+  mix-blend-mode: difference;
+}
+
+
+
+#canvasContainer {
+  position: absolute;
+  top:0;
+  left:0;
+  min-width: 100vw;
+  height: 100%;
+  z-index: -1;
+  padding:0;
+  margin:0;
+}
+
+.p5Canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+img {
+  opacity: 1.0;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+  width: 100%;
+}
+
