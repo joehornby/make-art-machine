@@ -79,7 +79,8 @@ button:focus {
 }
 
 button:active {
-  background-color: yellow;
+  background-color: #fff;
+  color: #3d3d3d;
 }
 
 .input {
@@ -95,9 +96,25 @@ button:active {
 
 .input__label {
   display: block;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   font-size: 0.5rem;
   text-transform: uppercase;
+}
+
+.input__poem,
+.input__quote {
+  padding-bottom: 1rem;
+  color: inherit;
+  position: relative;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.input__quote:hover::after {
+  content: 'Warning! Bad language possible!';
+  font-weight: 700;
+  position: absolute;
+  width: 18ch;
 }
 
 .input__playback {
@@ -161,7 +178,7 @@ button:active {
 }
 
 .blend-difference {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.9);
   mix-blend-mode: difference;
 }
 
