@@ -96,14 +96,16 @@ button:active {
 
 .input__label {
   display: block;
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
   font-size: 0.5rem;
   text-transform: uppercase;
+}
+.input__buttons {
+  margin-bottom: 3rem;
 }
 
 .input__poem,
 .input__quote {
-  padding-bottom: 1rem;
   color: inherit;
   position: relative;
   display: inline-block;
