@@ -66,12 +66,12 @@
         <p>A generative art work creating images from text. The images are created from an AttGAN trained model that consists of a series of neural network pairs - a generator and a discriminator. The generator is trained to generate images similar enough to real images from the training dataset. The discriminator evaluates the generated image, and compares them with the real ones and steer the generator in the right direction.</p>
         <p>The result is a model that is very good at drawing certain images, and very interesting to explore outside of that ability.</p>
         <p>AttnGAN was created by Tao Xu, et al. (MIT License, Copyright 2018)</p>
-        <button class="info__button" onclick="toggleInfoPanel()">Close</button>
+        <a class="info__button" id="info__close-button" href="#">Close</button>
     </section>
 
     <footer class="art__footer">
         <span class="art__footer__title">Make Art, Machine</span>
-        <button class="info__button" id="info__button" onclick="toggleInfoPanel()">Information</button>
+        <a id="info__button" class="info__button" href="#">Information</a>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
